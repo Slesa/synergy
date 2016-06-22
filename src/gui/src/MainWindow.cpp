@@ -150,7 +150,7 @@ MainWindow::~MainWindow()
 
 	saveSettings();
 
-	delete m_pZeroconfService;
+//	delete m_pZeroconfService;
 
 	if (m_DownloadMessageBox != NULL) {
 		delete m_DownloadMessageBox;
@@ -405,6 +405,7 @@ void MainWindow::updateStateFromLogLine(const QString &line)
 
 void MainWindow::checkConnected(const QString& line)
 {
+	qDebug() << "Checking connected: " << line;
 	// TODO: implement ipc connection state messages to replace this hack.
 	if (line.contains("started server") ||
 		line.contains("connected to server") ||
@@ -598,6 +599,7 @@ void MainWindow::startSynergy()
 	if (serviceMode)
 	{
 		QString command(app + " " + args.join(" "));
+		qDebug() << app;
 		m_IpcClient.sendCommand(command, appConfig().elevateMode());
 	}
 }
@@ -974,14 +976,14 @@ void MainWindow::updateZeroconfService()
 
 	if (isBonjourRunning()) {
 		if (!m_AppConfig.wizardShouldRun()) {
-			if (m_pZeroconfService) {
+/*			if (m_pZeroconfService) {
 				delete m_pZeroconfService;
 				m_pZeroconfService = NULL;
-			}
+			}*/
 
-			if (m_AppConfig.autoConfig() || synergyType() == synergyServer) {
+/*			if (m_AppConfig.autoConfig() || synergyType() == synergyServer) {
 				m_pZeroconfService = new ZeroconfService(this);
-			}
+			}*/
 		}
 	}
 }

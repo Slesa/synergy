@@ -1,6 +1,7 @@
 QT += widgets \
     network
 TEMPLATE = app
+CONFIG += Release
 TARGET = synergy
 DEFINES += VERSION_STAGE=\\\"$$QMAKE_VERSION_STAGE\\\"
 DEFINES += VERSION_REVISION=\\\"$$QMAKE_VERSION_REVISION\\\"
@@ -136,8 +137,9 @@ release {
 win32 { 
     Debug:DESTDIR = ../../bin/Debug
     Release:DESTDIR = ../../bin/Release
-    LIBS += -L"../../ext/bonjour/x64" \
-        -ldnssd
-    INCLUDEPATH += "$(BONJOUR_SDK_HOME)/Include"
+    LIBS += Advapi32.lib
+#    LIBS += -L"../../ext/bonjour/x64" \
+#        -ldnssd
+#    INCLUDEPATH += "$(BONJOUR_SDK_HOME)/Include"
 }
 else:DESTDIR = ../../bin

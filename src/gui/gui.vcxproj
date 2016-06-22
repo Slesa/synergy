@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8895B109-5615-327D-8B80-C8A464806374}</ProjectGuid>
+    <RootNamespace>synergy</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>..\..\bin\Debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>tmp\debug\</IntermediateDirectory>
+    <PrimaryOutput>synergy</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>..\..\bin\Release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>tmp\release\</IntermediateDirectory>
+    <PrimaryOutput>synergy</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">synergy</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">synergy</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>"..\..\..\..\qt4.src\include\QtCore";"..\..\..\..\qt4.src\include\QtNetwork";"..\..\..\..\qt4.src\include\QtGui";"..\..\..\..\qt4.src\include";".";"src";"$(BONJOUR_SDK_HOME)\Include";"..\..\..\..\qt4.src\include\ActiveQt";"tmp\debug";".";..\..\..\..\qt4.src\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>tmp\debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>tmp\debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>DEBUG;_WINDOWS;UNICODE;WIN32;VERSION_STAGE=\"\";VERSION_REVISION=\"\";QT_DLL;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d:\work\qt4.src\lib\qtmaind.lib;d:\work\qt4.src\lib\QtGuid4.lib;d:\work\qt4.src\lib\QtNetworkd4.lib;d:\work\qt4.src\lib\QtCored4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>d:\work\qt4.src\lib;../../ext/bonjour/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\synergy.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;VERSION_STAGE=\"\";VERSION_REVISION=\"\";QT_DLL;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>"..\..\..\..\qt4.src\include\QtCore";"..\..\..\..\qt4.src\include\QtNetwork";"..\..\..\..\qt4.src\include\QtGui";"..\..\..\..\qt4.src\include";".";"src";"$(BONJOUR_SDK_HOME)\Include";"..\..\..\..\qt4.src\include\ActiveQt";"tmp\release";".";..\..\..\..\qt4.src\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>tmp\release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>tmp\release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;VERSION_STAGE=\"\";VERSION_REVISION=\"\";QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d:\work\qt4.src\lib\qtmain.lib;dnssd.lib;d:\work\qt4.src\lib\QtGui4.lib;d:\work\qt4.src\lib\QtNetwork4.lib;d:\work\qt4.src\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>d:\work\qt4.src\lib;../../ext/bonjour/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\synergy.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;VERSION_STAGE=\"\";VERSION_REVISION=\"\";QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AboutDialog.cpp" />
+    <ClCompile Include="src\Action.cpp" />
+    <ClCompile Include="src\ActionDialog.cpp" />
+    <ClCompile Include="src\ActivationNotifier.cpp" />
+    <ClCompile Include="src\AddClientDialog.cpp" />
+    <ClCompile Include="src\AppConfig.cpp" />
+    <ClCompile Include="src\BaseConfig.cpp" />
+    <ClCompile Include="src\CommandProcess.cpp" />
+    <ClCompile Include="src\CoreInterface.cpp" />
+    <ClCompile Include="src\DataDownloader.cpp" />
+    <ClCompile Include="src\Fingerprint.cpp" />
+    <ClCompile Include="src\Hotkey.cpp" />
+    <ClCompile Include="src\HotkeyDialog.cpp" />
+    <ClCompile Include="src\Ipc.cpp" />
+    <ClCompile Include="src\IpcClient.cpp" />
+    <ClCompile Include="src\IpcReader.cpp" />
+    <ClCompile Include="src\KeySequence.cpp" />
+    <ClCompile Include="src\KeySequenceWidget.cpp" />
+    <ClCompile Include="src\MainWindow.cpp" />
+    <ClCompile Include="src\NewScreenWidget.cpp" />
+    <ClCompile Include="src\Plugin.cpp" />
+    <ClCompile Include="src\PluginManager.cpp" />
+    <ClCompile Include="..\lib\common\PluginVersion.cpp" />
+    <ClCompile Include="src\PluginWizardPage.cpp" />
+    <ClCompile Include="src\QSynergyApplication.cpp" />
+    <ClCompile Include="src\QUtility.cpp" />
+    <ClCompile Include="src\Screen.cpp" />
+    <ClCompile Include="src\ScreenSettingsDialog.cpp" />
+    <ClCompile Include="src\ScreenSetupModel.cpp" />
+    <ClCompile Include="src\ScreenSetupView.cpp" />
+    <ClCompile Include="src\ServerConfig.cpp" />
+    <ClCompile Include="src\ServerConfigDialog.cpp" />
+    <ClCompile Include="src\SettingsDialog.cpp" />
+    <ClCompile Include="src\SetupWizard.cpp" />
+    <ClCompile Include="src\SslCertificate.cpp" />
+    <ClCompile Include="src\SubscriptionManager.cpp" />
+    <ClCompile Include="src\SynergyLocale.cpp" />
+    <ClCompile Include="src\TrashScreenWidget.cpp" />
+    <ClCompile Include="src\VersionChecker.cpp" />
+    <ClCompile Include="src\WebClient.cpp" />
+    <ClCompile Include="src\ZeroconfBrowser.cpp" />
+    <ClCompile Include="src\ZeroconfRegister.cpp" />
+    <ClCompile Include="src\ZeroconfServer.cpp" />
+    <ClCompile Include="src\ZeroconfService.cpp" />
+    <ClCompile Include="src\ZeroconfThread.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\AboutDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\AboutDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\AboutDialog.h -o tmp\debug\moc_AboutDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\AboutDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_AboutDialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\AboutDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\AboutDialog.h -o tmp\release\moc_AboutDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\AboutDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_AboutDialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\Action.h" />
+    <CustomBuild Include="src\ActionDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ActionDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ActionDialog.h -o tmp\debug\moc_ActionDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ActionDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ActionDialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ActionDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ActionDialog.h -o tmp\release\moc_ActionDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ActionDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ActionDialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ActivationNotifier.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ActivationNotifier.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ActivationNotifier.h -o tmp\debug\moc_ActivationNotifier.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ActivationNotifier.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ActivationNotifier.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ActivationNotifier.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ActivationNotifier.h -o tmp\release\moc_ActivationNotifier.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ActivationNotifier.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ActivationNotifier.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\AddClientDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\AddClientDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\AddClientDialog.h -o tmp\debug\moc_AddClientDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\AddClientDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_AddClientDialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\AddClientDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\AddClientDialog.h -o tmp\release\moc_AddClientDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\AddClientDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_AddClientDialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\AppConfig.h" />
+    <ClInclude Include="src\BaseConfig.h" />
+    <CustomBuild Include="src\CommandProcess.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\CommandProcess.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\CommandProcess.h -o tmp\debug\moc_CommandProcess.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\CommandProcess.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_CommandProcess.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\CommandProcess.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\CommandProcess.h -o tmp\release\moc_CommandProcess.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\CommandProcess.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_CommandProcess.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\CoreInterface.h" />
+    <CustomBuild Include="src\DataDownloader.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\DataDownloader.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\DataDownloader.h -o tmp\debug\moc_DataDownloader.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\DataDownloader.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_DataDownloader.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\DataDownloader.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\DataDownloader.h -o tmp\release\moc_DataDownloader.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\DataDownloader.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_DataDownloader.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\EditionType.h" />
+    <ClInclude Include="src\Fingerprint.h" />
+    <ClInclude Include="src\Hotkey.h" />
+    <CustomBuild Include="src\HotkeyDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\HotkeyDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\HotkeyDialog.h -o tmp\debug\moc_HotkeyDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\HotkeyDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_HotkeyDialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\HotkeyDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\HotkeyDialog.h -o tmp\release\moc_HotkeyDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\HotkeyDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_HotkeyDialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\Ipc.h" />
+    <CustomBuild Include="src\IpcClient.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\IpcClient.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\IpcClient.h -o tmp\debug\moc_IpcClient.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\IpcClient.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_IpcClient.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\IpcClient.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\IpcClient.h -o tmp\release\moc_IpcClient.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\IpcClient.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_IpcClient.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\IpcReader.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\IpcReader.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\IpcReader.h -o tmp\debug\moc_IpcReader.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\IpcReader.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_IpcReader.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\IpcReader.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\IpcReader.h -o tmp\release\moc_IpcReader.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\IpcReader.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_IpcReader.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\KeySequence.h" />
+    <CustomBuild Include="src\KeySequenceWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\KeySequenceWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\KeySequenceWidget.h -o tmp\debug\moc_KeySequenceWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\KeySequenceWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_KeySequenceWidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\KeySequenceWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\KeySequenceWidget.h -o tmp\release\moc_KeySequenceWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\KeySequenceWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_KeySequenceWidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\MainWindow.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\MainWindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\MainWindow.h -o tmp\debug\moc_MainWindow.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\MainWindow.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_MainWindow.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\MainWindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\MainWindow.h -o tmp\release\moc_MainWindow.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\MainWindow.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_MainWindow.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\NewScreenWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\NewScreenWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\NewScreenWidget.h -o tmp\debug\moc_NewScreenWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\NewScreenWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_NewScreenWidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\NewScreenWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\NewScreenWidget.h -o tmp\release\moc_NewScreenWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\NewScreenWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_NewScreenWidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\Plugin.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\Plugin.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\Plugin.h -o tmp\debug\moc_Plugin.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\Plugin.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_Plugin.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\Plugin.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\Plugin.h -o tmp\release\moc_Plugin.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\Plugin.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_Plugin.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\PluginManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\PluginManager.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\PluginManager.h -o tmp\debug\moc_PluginManager.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\PluginManager.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_PluginManager.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\PluginManager.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\PluginManager.h -o tmp\release\moc_PluginManager.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\PluginManager.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_PluginManager.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\lib\common\PluginVersion.h" />
+    <CustomBuild Include="src\PluginWizardPage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\PluginWizardPage.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\PluginWizardPage.h -o tmp\debug\moc_PluginWizardPage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\PluginWizardPage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_PluginWizardPage.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\PluginWizardPage.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\PluginWizardPage.h -o tmp\release\moc_PluginWizardPage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\PluginWizardPage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_PluginWizardPage.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\ProcessorArch.h" />
+    <ClInclude Include="src\QSynergyApplication.h" />
+    <ClInclude Include="src\QUtility.h" />
+    <ClInclude Include="src\Screen.h" />
+    <CustomBuild Include="src\ScreenSettingsDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ScreenSettingsDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ScreenSettingsDialog.h -o tmp\debug\moc_ScreenSettingsDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ScreenSettingsDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ScreenSettingsDialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ScreenSettingsDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ScreenSettingsDialog.h -o tmp\release\moc_ScreenSettingsDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ScreenSettingsDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ScreenSettingsDialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ScreenSetupModel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ScreenSetupModel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ScreenSetupModel.h -o tmp\debug\moc_ScreenSetupModel.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ScreenSetupModel.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ScreenSetupModel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ScreenSetupModel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ScreenSetupModel.h -o tmp\release\moc_ScreenSetupModel.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ScreenSetupModel.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ScreenSetupModel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ScreenSetupView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ScreenSetupView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ScreenSetupView.h -o tmp\debug\moc_ScreenSetupView.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ScreenSetupView.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ScreenSetupView.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ScreenSetupView.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ScreenSetupView.h -o tmp\release\moc_ScreenSetupView.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ScreenSetupView.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ScreenSetupView.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\ServerConfig.h" />
+    <CustomBuild Include="src\ServerConfigDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ServerConfigDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ServerConfigDialog.h -o tmp\debug\moc_ServerConfigDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ServerConfigDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ServerConfigDialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ServerConfigDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ServerConfigDialog.h -o tmp\release\moc_ServerConfigDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ServerConfigDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ServerConfigDialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\SettingsDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\SettingsDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\SettingsDialog.h -o tmp\debug\moc_SettingsDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\SettingsDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_SettingsDialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\SettingsDialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\SettingsDialog.h -o tmp\release\moc_SettingsDialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\SettingsDialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_SettingsDialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\SetupWizard.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\SetupWizard.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\SetupWizard.h -o tmp\debug\moc_SetupWizard.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\SetupWizard.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_SetupWizard.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\SetupWizard.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\SetupWizard.h -o tmp\release\moc_SetupWizard.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\SetupWizard.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_SetupWizard.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\SslCertificate.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\SslCertificate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\SslCertificate.h -o tmp\debug\moc_SslCertificate.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\SslCertificate.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_SslCertificate.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\SslCertificate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\SslCertificate.h -o tmp\release\moc_SslCertificate.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\SslCertificate.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_SslCertificate.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\SubscriptionManager.h" />
+    <ClInclude Include="src\SynergyLocale.h" />
+    <CustomBuild Include="src\TrashScreenWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\TrashScreenWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\TrashScreenWidget.h -o tmp\debug\moc_TrashScreenWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\TrashScreenWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_TrashScreenWidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\TrashScreenWidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\TrashScreenWidget.h -o tmp\release\moc_TrashScreenWidget.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\TrashScreenWidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_TrashScreenWidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\VersionChecker.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\VersionChecker.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\VersionChecker.h -o tmp\debug\moc_VersionChecker.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\VersionChecker.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_VersionChecker.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\VersionChecker.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\VersionChecker.h -o tmp\release\moc_VersionChecker.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\VersionChecker.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_VersionChecker.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\WebClient.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\WebClient.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\WebClient.h -o tmp\debug\moc_WebClient.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\WebClient.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_WebClient.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\WebClient.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\WebClient.h -o tmp\release\moc_WebClient.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\WebClient.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_WebClient.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ZeroconfBrowser.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfBrowser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfBrowser.h -o tmp\debug\moc_ZeroconfBrowser.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ZeroconfBrowser.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ZeroconfBrowser.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfBrowser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfBrowser.h -o tmp\release\moc_ZeroconfBrowser.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ZeroconfBrowser.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ZeroconfBrowser.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\ZeroconfRecord.h" />
+    <CustomBuild Include="src\ZeroconfRegister.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfRegister.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfRegister.h -o tmp\debug\moc_ZeroconfRegister.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ZeroconfRegister.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ZeroconfRegister.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfRegister.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfRegister.h -o tmp\release\moc_ZeroconfRegister.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ZeroconfRegister.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ZeroconfRegister.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ZeroconfServer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfServer.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfServer.h -o tmp\debug\moc_ZeroconfServer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ZeroconfServer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ZeroconfServer.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfServer.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfServer.h -o tmp\release\moc_ZeroconfServer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ZeroconfServer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ZeroconfServer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ZeroconfService.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfService.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfService.h -o tmp\debug\moc_ZeroconfService.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ZeroconfService.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ZeroconfService.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfService.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfService.h -o tmp\release\moc_ZeroconfService.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ZeroconfService.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ZeroconfService.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ZeroconfThread.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfThread.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\debug" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfThread.h -o tmp\debug\moc_ZeroconfThread.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC src\ZeroconfThread.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\moc_ZeroconfThread.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe;src\ZeroconfThread.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\moc.exe  -DUNICODE -DWIN32 -DVERSION_STAGE=\"\" -DVERSION_REVISION=\"\" -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\..\..\qt4.src\include\QtCore" -I"..\..\..\..\qt4.src\include\QtNetwork" -I"..\..\..\..\qt4.src\include\QtGui" -I"..\..\..\..\qt4.src\include" -I"." -I"src" -I"$(BONJOUR_SDK_HOME)\Include" -I"..\..\..\..\qt4.src\include\ActiveQt" -I"tmp\release" -I"." -I..\..\..\..\qt4.src\mkspecs\win32-msvc2013 -D_MSC_VER=1800 -DWIN32 src\ZeroconfThread.h -o tmp\release\moc_ZeroconfThread.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC src\ZeroconfThread.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\moc_ZeroconfThread.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tmp\debug\moc_AboutDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_AboutDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ActionDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ActionDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ActivationNotifier.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ActivationNotifier.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_AddClientDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_AddClientDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_CommandProcess.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_CommandProcess.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_DataDownloader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_DataDownloader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_HotkeyDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_HotkeyDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_IpcClient.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_IpcClient.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_IpcReader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_IpcReader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_KeySequenceWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_KeySequenceWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_MainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_MainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_NewScreenWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_NewScreenWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_Plugin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_Plugin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_PluginManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_PluginManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_PluginWizardPage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_PluginWizardPage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ScreenSettingsDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ScreenSettingsDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ScreenSetupModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ScreenSetupModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ScreenSetupView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ScreenSetupView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ServerConfigDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ServerConfigDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_SettingsDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_SettingsDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_SetupWizard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_SetupWizard.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_SslCertificate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_SslCertificate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_TrashScreenWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_TrashScreenWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_VersionChecker.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_VersionChecker.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_WebClient.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_WebClient.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ZeroconfBrowser.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ZeroconfBrowser.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ZeroconfRegister.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ZeroconfRegister.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ZeroconfServer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ZeroconfServer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ZeroconfService.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ZeroconfService.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\moc_ZeroconfThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\moc_ZeroconfThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\debug\qrc_Synergy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tmp\release\qrc_Synergy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="ui_AboutDialogBase.h" />
+    <ClInclude Include="ui_ActionDialogBase.h" />
+    <ClInclude Include="ui_AddClientDialogBase.h" />
+    <ClInclude Include="ui_HotkeyDialogBase.h" />
+    <ClInclude Include="ui_MainWindowBase.h" />
+    <ClInclude Include="ui_PluginWizardPageBase.h" />
+    <ClInclude Include="ui_ScreenSettingsDialogBase.h" />
+    <ClInclude Include="ui_ServerConfigDialogBase.h" />
+    <ClInclude Include="ui_SettingsDialogBase.h" />
+    <ClInclude Include="ui_SetupWizardBase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\AboutDialogBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;res\AboutDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\AboutDialogBase.ui -o ui_AboutDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\AboutDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_AboutDialogBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;res\AboutDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\AboutDialogBase.ui -o ui_AboutDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\AboutDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_AboutDialogBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\ActionDialogBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;KeySequenceWidget.h;res\ActionDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\ActionDialogBase.ui -o ui_ActionDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\ActionDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_ActionDialogBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;KeySequenceWidget.h;res\ActionDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\ActionDialogBase.ui -o ui_ActionDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\ActionDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_ActionDialogBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\AddClientDialogBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;res\AddClientDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\AddClientDialogBase.ui -o ui_AddClientDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\AddClientDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_AddClientDialogBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;res\AddClientDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\AddClientDialogBase.ui -o ui_AddClientDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\AddClientDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_AddClientDialogBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\HotkeyDialogBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;KeySequenceWidget.h;res\HotkeyDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\HotkeyDialogBase.ui -o ui_HotkeyDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\HotkeyDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_HotkeyDialogBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;KeySequenceWidget.h;res\HotkeyDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\HotkeyDialogBase.ui -o ui_HotkeyDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\HotkeyDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_HotkeyDialogBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\MainWindowBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;res\MainWindowBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\MainWindowBase.ui -o ui_MainWindowBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\MainWindowBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_MainWindowBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;res\MainWindowBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\MainWindowBase.ui -o ui_MainWindowBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\MainWindowBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_MainWindowBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\PluginWizardPageBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;res\PluginWizardPageBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\PluginWizardPageBase.ui -o ui_PluginWizardPageBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\PluginWizardPageBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_PluginWizardPageBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;res\PluginWizardPageBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\PluginWizardPageBase.ui -o ui_PluginWizardPageBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\PluginWizardPageBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_PluginWizardPageBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\ScreenSettingsDialogBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;res\ScreenSettingsDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\ScreenSettingsDialogBase.ui -o ui_ScreenSettingsDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\ScreenSettingsDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_ScreenSettingsDialogBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;res\ScreenSettingsDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\ScreenSettingsDialogBase.ui -o ui_ScreenSettingsDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\ScreenSettingsDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_ScreenSettingsDialogBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\ServerConfigDialogBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;NewScreenWidget.h;ScreenSetupView.h;TrashScreenWidget.h;res\ServerConfigDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\ServerConfigDialogBase.ui -o ui_ServerConfigDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\ServerConfigDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_ServerConfigDialogBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;NewScreenWidget.h;ScreenSetupView.h;TrashScreenWidget.h;res\ServerConfigDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\ServerConfigDialogBase.ui -o ui_ServerConfigDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\ServerConfigDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_ServerConfigDialogBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\SettingsDialogBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;res\SettingsDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\SettingsDialogBase.ui -o ui_SettingsDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\SettingsDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_SettingsDialogBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;res\SettingsDialogBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\SettingsDialogBase.ui -o ui_SettingsDialogBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\SettingsDialogBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_SettingsDialogBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="res\SetupWizardBase.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe;res\SetupWizardBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\uic.exe res\SetupWizardBase.ui -o ui_SetupWizardBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC res\SetupWizardBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_SetupWizardBase.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe;res\SetupWizardBase.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\uic.exe res\SetupWizardBase.ui -o ui_SetupWizardBase.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC res\SetupWizardBase.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_SetupWizardBase.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\lang\Languages.xml" />
+    <CustomBuild Include="res\Synergy.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\rcc.exe;res\Synergy.qrc;res\icons\16x16\money.png;res\icons\16x16\padlock.png;res\icons\16x16\synergy-connected.png;res\icons\16x16\synergy-disconnected.png;res\icons\16x16\synergy-transfering.png;res\icons\16x16\warning.png;res\icons\256x256\synergy.ico;res\icons\64x64\user-trash.png;res\icons\64x64\video-display.png;res\image\about.png;res\image\spinning-wheel.gif;res\lang\Languages.xml;res\lang\gui_ar.qm;res\lang\gui_bg-BG.qm;res\lang\gui_ca-AD.qm;res\lang\gui_cs-CZ.qm;res\lang\gui_cy.qm;res\lang\gui_da.qm;res\lang\gui_de.qm;res\lang\gui_es.qm;res\lang\gui_fi.qm;res\lang\gui_fr.qm;res\lang\gui_grk.qm;res\lang\gui_he.qm;res\lang\gui_hr-HR.qm;res\lang\gui_hu-HU.qm;res\lang\gui_id.qm;res\lang\gui_it.qm;res\lang\gui_ja-JP.qm;res\lang\gui_ko.qm;res\lang\gui_lt.qm;res\lang\gui_lv.qm;res\lang\gui_mr.qm;res\lang\gui_nl-NL.qm;res\lang\gui_no.qm;res\lang\gui_pes-IR.qm;res\lang\gui_pl-PL.qm;res\lang\gui_pt-BR.qm;res\lang\gui_pt-PT.qm;res\lang\gui_ro.qm;res\lang\gui_ru.qm;res\lang\gui_si.qm;res\lang\gui_sk-SK.qm;res\lang\gui_sl-SI.qm;res\lang\gui_sq-AL.qm;res\lang\gui_sr.qm;res\lang\gui_sv.qm;res\lang\gui_th-TH.qm;res\lang\gui_tr-TR.qm;res\lang\gui_uk.qm;res\lang\gui_ur.qm;res\lang\gui_vi.qm;res\lang\gui_zh-CN.qm;res\lang\gui_zh-TW.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\qt4.src\bin\rcc.exe -name Synergy res\Synergy.qrc -o tmp\debug\qrc_Synergy.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RCC res\Synergy.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tmp\debug\qrc_Synergy.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\rcc.exe;res\Synergy.qrc;res\icons\16x16\money.png;res\icons\16x16\padlock.png;res\icons\16x16\synergy-connected.png;res\icons\16x16\synergy-disconnected.png;res\icons\16x16\synergy-transfering.png;res\icons\16x16\warning.png;res\icons\256x256\synergy.ico;res\icons\64x64\user-trash.png;res\icons\64x64\video-display.png;res\image\about.png;res\image\spinning-wheel.gif;res\lang\Languages.xml;res\lang\gui_ar.qm;res\lang\gui_bg-BG.qm;res\lang\gui_ca-AD.qm;res\lang\gui_cs-CZ.qm;res\lang\gui_cy.qm;res\lang\gui_da.qm;res\lang\gui_de.qm;res\lang\gui_es.qm;res\lang\gui_fi.qm;res\lang\gui_fr.qm;res\lang\gui_grk.qm;res\lang\gui_he.qm;res\lang\gui_hr-HR.qm;res\lang\gui_hu-HU.qm;res\lang\gui_id.qm;res\lang\gui_it.qm;res\lang\gui_ja-JP.qm;res\lang\gui_ko.qm;res\lang\gui_lt.qm;res\lang\gui_lv.qm;res\lang\gui_mr.qm;res\lang\gui_nl-NL.qm;res\lang\gui_no.qm;res\lang\gui_pes-IR.qm;res\lang\gui_pl-PL.qm;res\lang\gui_pt-BR.qm;res\lang\gui_pt-PT.qm;res\lang\gui_ro.qm;res\lang\gui_ru.qm;res\lang\gui_si.qm;res\lang\gui_sk-SK.qm;res\lang\gui_sl-SI.qm;res\lang\gui_sq-AL.qm;res\lang\gui_sr.qm;res\lang\gui_sv.qm;res\lang\gui_th-TH.qm;res\lang\gui_tr-TR.qm;res\lang\gui_uk.qm;res\lang\gui_ur.qm;res\lang\gui_vi.qm;res\lang\gui_zh-CN.qm;res\lang\gui_zh-TW.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\work\qt4.src\bin\rcc.exe -name Synergy res\Synergy.qrc -o tmp\release\qrc_Synergy.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RCC res\Synergy.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tmp\release\qrc_Synergy.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\image\about.png" />
+    <None Include="res\lang\gui_ar.qm" />
+    <None Include="res\lang\gui_bg-BG.qm" />
+    <None Include="res\lang\gui_ca-AD.qm" />
+    <None Include="res\lang\gui_cs-CZ.qm" />
+    <None Include="res\lang\gui_cy.qm" />
+    <None Include="res\lang\gui_da.qm" />
+    <None Include="res\lang\gui_de.qm" />
+    <None Include="res\lang\gui_es.qm" />
+    <None Include="res\lang\gui_fi.qm" />
+    <None Include="res\lang\gui_fr.qm" />
+    <None Include="res\lang\gui_grk.qm" />
+    <None Include="res\lang\gui_he.qm" />
+    <None Include="res\lang\gui_hr-HR.qm" />
+    <None Include="res\lang\gui_hu-HU.qm" />
+    <None Include="res\lang\gui_id.qm" />
+    <None Include="res\lang\gui_it.qm" />
+    <None Include="res\lang\gui_ja-JP.qm" />
+    <None Include="res\lang\gui_ko.qm" />
+    <None Include="res\lang\gui_lt.qm" />
+    <None Include="res\lang\gui_lv.qm" />
+    <None Include="res\lang\gui_mr.qm" />
+    <None Include="res\lang\gui_nl-NL.qm" />
+    <None Include="res\lang\gui_no.qm" />
+    <None Include="res\lang\gui_pes-IR.qm" />
+    <None Include="res\lang\gui_pl-PL.qm" />
+    <None Include="res\lang\gui_pt-BR.qm" />
+    <None Include="res\lang\gui_pt-PT.qm" />
+    <None Include="res\lang\gui_ro.qm" />
+    <None Include="res\lang\gui_ru.qm" />
+    <None Include="res\lang\gui_si.qm" />
+    <None Include="res\lang\gui_sk-SK.qm" />
+    <None Include="res\lang\gui_sl-SI.qm" />
+    <None Include="res\lang\gui_sq-AL.qm" />
+    <None Include="res\lang\gui_sr.qm" />
+    <None Include="res\lang\gui_sv.qm" />
+    <None Include="res\lang\gui_th-TH.qm" />
+    <None Include="res\lang\gui_tr-TR.qm" />
+    <None Include="res\lang\gui_uk.qm" />
+    <None Include="res\lang\gui_ur.qm" />
+    <None Include="res\lang\gui_vi.qm" />
+    <None Include="res\lang\gui_zh-CN.qm" />
+    <None Include="res\lang\gui_zh-TW.qm" />
+    <None Include="res\icons\16x16\money.png" />
+    <None Include="res\icons\16x16\padlock.png" />
+    <None Include="res\image\spinning-wheel.gif" />
+    <None Include="res\icons\16x16\synergy-connected.png" />
+    <None Include="res\icons\16x16\synergy-disconnected.png" />
+    <None Include="res\icons\16x16\synergy-transfering.png" />
+    <None Include="res\icons\256x256\synergy.ico" />
+    <None Include="res\icons\64x64\user-trash.png" />
+    <None Include="res\icons\64x64\video-display.png" />
+    <None Include="res\icons\16x16\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\win\Synergy.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

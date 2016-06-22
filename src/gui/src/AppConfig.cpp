@@ -54,6 +54,7 @@ AppConfig::AppConfig(QSettings* settings) :
 	m_LogLevel(0),
 	m_WizardLastRun(0),
 	m_ProcessMode(DEFAULT_PROCESS_MODE),
+	//m_ProcessMode(Desktop),
 	m_AutoConfig(true),
 	m_ElevateMode(false),
 	m_AutoConfigPrompted(false),

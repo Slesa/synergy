@@ -11,6 +11,11 @@
     <OutputPath>..\..\..\bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>..\..\..\build\wix\obj\$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DefineConstants>Debug;QtPath=..\..\..\bin\Debug;BinPath=..\..\..\bin\Releaase</DefineConstants>
+    <WixVariables>
+    </WixVariables>
+  </PropertyGroup>
   <ItemGroup>
     <WixExtension Include="WixFirewallExtension">
       <HintPath>$(WixExtDir)\WixFirewallExtension.dll</HintPath>

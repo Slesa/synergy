@@ -3,8 +3,8 @@ config.h
 *~
 \.*.swp
 /bin
+/obj
 /lib
-/build
 /CMakeFiles
 /ext/cryptopp562
 /ext/gmock-1.6.0
@@ -18,3 +18,7 @@ src/gui/gui.pro.user*
 src/gui/.qmake.stash
 src/gui/.rnd
 src/setup/win32/synergy.suo
+*.odb
+*.suo
+*.sdf
+*.vcxproj.user
